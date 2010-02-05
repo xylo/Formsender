@@ -3,9 +3,12 @@ package org.vaadin.risto.formsender;
 import java.util.Map;
 
 import com.vaadin.Application;
+import com.vaadin.data.Property;
+import com.vaadin.data.Property.ValueChangeEvent;
 import com.vaadin.terminal.ParameterHandler;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.LoginForm;
+import com.vaadin.ui.NativeSelect;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.Window;
 import com.vaadin.ui.LoginForm.LoginEvent;
@@ -24,12 +27,11 @@ public class FormsenderApplication extends Application implements
         mainWindow.addParameterHandler(this);
 
         Panel panel = new Panel();
-        panel.setWidth("500px");
+        panel.setWidth("400px");
 
         final FormSender formSender = new FormSender();
 
         formSender.setFormMethod(FormSender.Method.POST);
-        formSender.setFormTarget("");
 
         LoginForm loginForm = new LoginForm();
         loginForm.addListener(new LoginListener() {
@@ -46,7 +48,27 @@ public class FormsenderApplication extends Application implements
             }
         });
 
+        NativeSelect select = new NativeSelect("Choose submit target");
+        select.setNullSelectionAllowed(false);
+        select.addContainerProperty("caption", String.class, "");
+        select.addItem("").getItemProperty("caption").setValue(
+                "This application");
+        select.addItem("printparameters.jsp").getItemProperty("caption")
+                .setValue("JSP page");
+        select.setItemCaptionPropertyId("caption");
+        select.addListener(new Property.ValueChangeListener() {
+
+            private static final long serialVersionUID = -488987561395827034L;
+
+            public void valueChange(ValueChangeEvent event) {
+                formSender.setFormTarget((String) event.getProperty()
+                        .getValue());
+            }
+        });
+        select.select("printparameters.jsp");
+
         panel.addComponent(loginForm);
+        panel.addComponent(select);
         mainWindow.addComponent(panel);
         mainWindow.addComponent(formSender);
 

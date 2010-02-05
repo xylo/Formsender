@@ -13,20 +13,21 @@
 Enumeration paramNames = request.getParameterNames();
 while(paramNames.hasMoreElements()) {
     String name = (String) paramNames.nextElement();
-    out.println("Name: " + name);
+    out.print("Name: " + name + "<br/>");
     String[] values = request.getParameterValues(name);
     if(values.length == 1) {
         String value = values[0];
         if(value.length() == 0) {
-            out.print("No Value");
+            out.println("No Value" + "<br/>");
         }else {
-            out.print("Value: " + value);
+            out.println("Value: " + value + "<br/>");
         }
     }else {
         for(String value : values) {
-            out.print("Value: " + value);
+            out.println("Value: " + value + "<br/>");
         }
     }
+    
 }
 
 %>

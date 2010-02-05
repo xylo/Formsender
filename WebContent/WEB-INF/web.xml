@@ -24,16 +24,12 @@
   		<param-value>org.vaadin.risto.formsender.widgetset.FormsenderWidgetset</param-value>
   	</init-param>
   </servlet>
-  <servlet-mapping>
-  	<servlet-name>Formsender Application</servlet-name>
-  	<url-pattern>/*</url-pattern>
-  </servlet-mapping>
-  <!-- <servlet-mapping>
+	<servlet-mapping>
   	<servlet-name>Formsender Application</servlet-name>
   	<url-pattern>/app/*</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>Formsender Application</servlet-name>
   	<url-pattern>/VAADIN/*</url-pattern>
-  </servlet-mapping> -->
+  </servlet-mapping>
 </web-app>
