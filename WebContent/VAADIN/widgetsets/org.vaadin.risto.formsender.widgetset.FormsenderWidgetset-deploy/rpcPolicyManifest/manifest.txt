@@ -1,2 +1,0 @@
-# Module org.vaadin.risto.formsender.widgetset.FormsenderWidgetset
-# RPC service class, partial path of RPC policy file
