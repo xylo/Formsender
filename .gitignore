@@ -1,0 +1,7 @@
+.classpath
+.project
+.settings
+build
+.svn
+rebel.xml
+WebContent/VAADIN/widgetsets

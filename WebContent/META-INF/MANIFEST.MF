@@ -1,10 +1,3 @@
 Manifest-Version: 1.0
 Class-Path: 
-Vaadin-License-Title: Apache License 2.0
-Implementation-Title: FormSender
-Vaadin-Package-Version: 1
-Vaadin-Widgetsets: org.vaadin.risto.formsender.widgetset.FormsenderWid
- getset
-Implementation-Version: 0.1
-Implementation-Vendor: Risto Yrjänä / IT Mill Ltd
 
