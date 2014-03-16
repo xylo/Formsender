@@ -1,10 +1,10 @@
 package org.vaadin.risto.formsender;
 
-import java.util.HashMap;
-
 import com.vaadin.terminal.PaintException;
 import com.vaadin.terminal.PaintTarget;
 import com.vaadin.ui.AbstractComponent;
+
+import java.util.HashMap;
 
 /**
  * Component that allows submitting post or get requests from a vaadin
@@ -35,6 +35,7 @@ public class FormSender extends AbstractComponent {
 
     private boolean submitForm;
 
+    private String formAction;
     private String formTarget;
 
     public FormSender() {
@@ -52,7 +53,8 @@ public class FormSender extends AbstractComponent {
 
         if (submitForm) {
             target.addAttribute("submit", true);
-            target.addAttribute("target", formTarget.toString());
+            target.addAttribute("action", formAction);
+            target.addAttribute("target", formTarget);
             target.addAttribute("method", formMethod.toString());
             target.startTag("values");
             for (String name : values.keySet()) {
@@ -109,7 +111,16 @@ public class FormSender extends AbstractComponent {
         values.put(name, value);
     }
 
-    /**
+
+	public String getFormAction() {
+		return formAction;
+	}
+
+	public void setFormAction(String formAction) {
+		this.formAction = formAction;
+	}
+
+	/**
      * Set the submit target. This can be a full valid URL or a part of it
      * relative to the current application.
      * 
