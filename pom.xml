@@ -125,7 +125,7 @@
 							<Implementation-Version>${version}</Implementation-Version>
 							<Implementation-Title>${name}</Implementation-Title>
 							<Vaadin-Widgetsets>org.vaadin.risto.formsender.widgetset.FormsenderWidgetset</Vaadin-Widgetsets>
-							<Source-Code>https://github.com/xylo/...</Source-Code>
+							<Source-Code>https://github.com/xylo/Formsender</Source-Code>
 							<License>Apache License 2.0</License>
 						</manifestEntries>
 					</archive>
