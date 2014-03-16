@@ -1,6 +1,6 @@
-# Formsender add-on for Vaadin 6
+# FormSender add-on for Vaadin 6
 
-This is a fork of [https://github.com/ripla/Formsender](https://github.com/ripla/Formsender), a simple add-on that enables you to perform HTTP POST requests on the client-side.  See [the Directory](http://vaadin.com/addon/formsender) for more info.
+This is a fork of [FormSender](https://github.com/ripla/Formsender), a simple add-on that enables you to perform HTTP POST requests on the client-side.  See [the Directory](http://vaadin.com/addon/formsender) for more info.
 
 ### Improvements
 
