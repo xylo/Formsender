@@ -5,8 +5,8 @@
 	<groupId>org.vaadin.risto</groupId>
 	<artifactId>formsender</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0-xylo</version>
-	<name>FormSender for Vaadin 6 (xylo)</name>
+	<version>1.1-xylo</version>
+	<name>Improved FormSender for Vaadin 6</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
